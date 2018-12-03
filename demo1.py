@@ -38,6 +38,7 @@ with open(hc_file, 'w') as hc_file_object:
         hc_item = hc_item+'\n'
         hc_file_object.write(hc_item)
 
+# E.g. demonstration for hamming-decoding
 with open(dhc_file, 'w') as dhc_file_object:
     for hc_item in binary_list:
         dhc_item = hd(hc_item)
