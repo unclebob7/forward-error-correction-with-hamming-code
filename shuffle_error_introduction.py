@@ -1,5 +1,6 @@
 import numpy as np
 from HammingDecode import hammingDecode as hd
+from sequence_error import err_sequence
 
 dhc_file = 'b2h.txt'
 compromised_h_file = 'compromised_h.txt'
@@ -25,12 +26,15 @@ rnd_idx = np.random.permutation(366401)
 # shuffled order sequence of dataset (constant)
 shuffle_order_sequence = order_sequence[rnd_idx]
 print('after-shuffled order-sequence demonstration:', shuffle_order_sequence[:10])
-# aft_shuffle_array = pre_shuffle_array[rnd_idx]
-# print('pre-shuffle demonstration:', pre_shuffle_array[:5])
-# print('after-shuffle demonstration:', aft_shuffle_array[:5])
+
 
 # apply changes to pre-shuffled sequence (awaiting to be updated to percentage form)
-pre_shuffle_array[shuffle_order_sequence[:100000]] = 0
+# pre_shuffle_array[shuffle_order_sequence[:100000]] = 0
+# compromised_output_list = list(pre_shuffle_array)
+
+# pre_shuffle_list = list(pre_shuffle_array[shuffle_order_sequence[:100000]])
+for item in pre_shuffle_array[shuffle_order_sequence[:300000]]:
+    item = err_sequence(item)
 compromised_output_list = list(pre_shuffle_array)
 
 # output compromised file (binary form)
