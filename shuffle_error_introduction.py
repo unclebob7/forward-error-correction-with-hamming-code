@@ -1,10 +1,12 @@
 import numpy as np
 from HammingDecode import hammingDecode as hd
-from sequence_error import err_sequence
+from sequence_error import err_sequence_1,err_sequence_23
+from HammingCode import hammingCorrection as hc
 
 dhc_file = 'b2h.txt'
 compromised_h_file = 'compromised_h.txt'
 compromised_b_file = 'compromised_b.txt'
+fec_b_file = 'fec_b.txt'
 pre_shuffle_list = []
 # aft_shuffle_array = []
 order_sequence = np.linspace(0,366400, 366401, dtype=np.int)
@@ -33,19 +35,43 @@ print('after-shuffled order-sequence demonstration:', shuffle_order_sequence[:10
 # compromised_output_list = list(pre_shuffle_array)
 
 # pre_shuffle_list = list(pre_shuffle_array[shuffle_order_sequence[:100000]])
-for item in pre_shuffle_array[shuffle_order_sequence[:300000]]:
-    item = err_sequence(item)
+
+"""introduce 1-bit error"""
+for item in shuffle_order_sequence[:100000]:
+    pre_shuffle_array[item] = err_sequence_1(pre_shuffle_array[item])
+
+"""introduce 2 or 3-bit error"""
+for item in shuffle_order_sequence[100000:]:
+    pre_shuffle_array[item] = err_sequence_23(pre_shuffle_array[item])
 compromised_output_list = list(pre_shuffle_array)
 
-# output compromised file (binary form)
+# output compromised file (18 form)
 with open(compromised_h_file, 'w') as cbf_object:
     for comp_item in compromised_output_list:
         comp_item = comp_item+'\n'
         cbf_object.write(comp_item)
 
-# output compromised file (float form)
+# output compromised file (13 form)
 with open(compromised_b_file, 'w') as cff_object:
     for hc_item in compromised_output_list:
         dhc_item = hd(hc_item)
         dhc_item = dhc_item+'\n'
         cff_object.write(dhc_item)
+
+"""rectify 1-bit error from 1-bit error introduction"""
+for item in shuffle_order_sequence[:100000]:
+    chc_list_item = hc(pre_shuffle_array[item])
+    chc_list_item = [str(i) for i in chc_list_item]
+    chc_str_item = ''.join(chc_list_item)
+    pre_shuffle_array[item] = chc_str_item
+
+for item in shuffle_order_sequence[100000:]:
+    pre_shuffle_array[item] = hd(pre_shuffle_array[item])
+rectified_output_list = list(pre_shuffle_array)
+
+
+# output fec file in de-hamming form (13)
+with open(fec_b_file,'w') as fec_b_object:
+    for rectified_item in rectified_output_list:
+        rectified_item = rectified_item+'\n'
+        fec_b_object.write(rectified_item)
