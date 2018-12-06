@@ -9,7 +9,7 @@ compromised_b_file = 'compromised_b.txt'
 fec_b_file = 'fec_b.txt'
 pre_shuffle_list = []
 # aft_shuffle_array = []
-order_sequence = np.linspace(0,366400, 366401, dtype=np.int)
+order_sequence = np.linspace(0,284443, 284444, dtype=np.int)
 shuffle_order_sequence = []
 
 with open(dhc_file, 'r') as dhc_file_object:
@@ -24,7 +24,7 @@ print('total length of dataset:{0}'.format(len(pre_shuffle_array)))
 # fix the result for every shuffle
 np.random.seed(42)
 # randomly permutate the sequence of dataset (variable)
-rnd_idx = np.random.permutation(366401)
+rnd_idx = np.random.permutation(284444)
 # shuffled order sequence of dataset (constant)
 shuffle_order_sequence = order_sequence[rnd_idx]
 print('after-shuffled order-sequence demonstration:', shuffle_order_sequence[:10])
@@ -37,11 +37,11 @@ print('after-shuffled order-sequence demonstration:', shuffle_order_sequence[:10
 # pre_shuffle_list = list(pre_shuffle_array[shuffle_order_sequence[:100000]])
 
 """introduce 1-bit error"""
-for item in shuffle_order_sequence[:100000]:
+for item in shuffle_order_sequence[:283900]:
     pre_shuffle_array[item] = err_sequence_1(pre_shuffle_array[item])
 
 """introduce 2 or 3-bit error"""
-for item in shuffle_order_sequence[100000:]:
+for item in shuffle_order_sequence[283900:]:
     pre_shuffle_array[item] = err_sequence_23(pre_shuffle_array[item])
 compromised_output_list = list(pre_shuffle_array)
 
@@ -59,13 +59,14 @@ with open(compromised_b_file, 'w') as cff_object:
         cff_object.write(dhc_item)
 
 """rectify 1-bit error from 1-bit error introduction"""
-for item in shuffle_order_sequence[:100000]:
+for item in shuffle_order_sequence[:283900]:
     chc_list_item = hc(pre_shuffle_array[item])
     chc_list_item = [str(i) for i in chc_list_item]
     chc_str_item = ''.join(chc_list_item)
     pre_shuffle_array[item] = chc_str_item
 
-for item in shuffle_order_sequence[100000:]:
+"""rectify 2/3-bit error from 2/3-bit error introduction"""
+for item in shuffle_order_sequence[283900:]:
     pre_shuffle_array[item] = hd(pre_shuffle_array[item])
 rectified_output_list = list(pre_shuffle_array)
 

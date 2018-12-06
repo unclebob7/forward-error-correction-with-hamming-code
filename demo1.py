@@ -2,14 +2,12 @@ from HammingCode import noOfParityBits as parity_num_func
 from HammingCode import noOfParityBitsInCode as test_func2
 from HammingCode import hammingCodes as hc
 from HammingDecode import hammingDecode as hd
-#from HammingCode import hammingCorrection as hc
-
 
 print('E.g : #parity bits in (7, 4)Hamming code')
 print('{0} {1}'.format(parity_num_func(13), test_func2(18)))
 
 # original binary file
-ori_file = 'a2b.txt'
+ori_file = 'mlk_b.txt'
 # file that stores hamming-encoded data-set
 hc_file  ='b2h.txt'
 # file that stores decoded hamming-encoded data-set
