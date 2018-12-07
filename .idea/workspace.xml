@@ -3,15 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c7eb8d1a-9c7e-446b-87d9-201509bd5a9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/b2h.txt" beforeDir="false" afterPath="$PROJECT_DIR$/b2h.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2b.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/compromised_b.txt" beforeDir="false" afterPath="$PROJECT_DIR$/compromised_b.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/compromised_h.txt" beforeDir="false" afterPath="$PROJECT_DIR$/compromised_h.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fec_b.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fec_b.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gasr.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h2b.txt" beforeDir="false" afterPath="$PROJECT_DIR$/h2b.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamming_concatenation.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sequence_error.py" beforeDir="false" afterPath="$PROJECT_DIR$/sequence_error.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shuffle_error_introduction.py" beforeDir="false" afterPath="$PROJECT_DIR$/shuffle_error_introduction.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,13 +19,14 @@
     <session id="-1827619791">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.6" value="6" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="7" />
           <entry key="project.open.time.7" value="6" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -49,27 +45,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="4408" />
+          <entry key="Python Console" value="4456" />
           <entry key="dummy" value="13" />
-          <entry key="py" value="5055" />
+          <entry key="py" value="5231" />
           <entry key="txt" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="44" />
-          <entry key="Python" value="9463" />
+          <entry key="Python" value="9687" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+            <state relative-caret-position="108">
+              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
@@ -77,11 +73,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shuffle_error_introduction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="876">
-              <caret line="68" column="39" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+            <state relative-caret-position="161">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HammingCode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" selection-start-line="28" selection-end-line="29" />
+            <state relative-caret-position="1152">
+              <caret line="64" selection-start-line="64" selection-end-line="64" />
             </state>
           </provider>
         </entry>
@@ -139,9 +138,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="width" value="979" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -150,7 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -162,6 +160,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -317,10 +316,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="781" height="840" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3295905" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3295905" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -328,7 +327,7 @@
       <window_info anchor="bottom" id="Debug" order="2" weight="0.31114328" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.4993395" weight="0.31837916" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.4993395" weight="0.3560058" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32803467" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5006605" side_tool="true" weight="0.32658958" />
@@ -383,12 +382,8 @@
     <entry file="file://$PROJECT_DIR$/hamming_decode.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/h2b.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/b2h.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/h2b.txt" />
+    <entry file="file://$PROJECT_DIR$/b2h.txt" />
     <entry file="file://$PROJECT_DIR$/shuffle_error_introduction.ipynb" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -412,20 +407,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gasr.py" />
-    <entry file="file://$PROJECT_DIR$/fec_b.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/fec_b.txt" />
     <entry file="file://$PROJECT_DIR$/hamming_concatenation.ipynb" />
-    <entry file="file://$PROJECT_DIR$/demo1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sequence_error.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -435,15 +418,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HammingCode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" selection-start-line="28" selection-end-line="29" />
+        <state relative-caret-position="1152">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shuffle_error_introduction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="876">
-          <caret line="68" column="39" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+        <state relative-caret-position="161">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

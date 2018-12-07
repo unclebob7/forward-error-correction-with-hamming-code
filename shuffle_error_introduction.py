@@ -37,11 +37,11 @@ print('after-shuffled order-sequence demonstration:', shuffle_order_sequence[:10
 # pre_shuffle_list = list(pre_shuffle_array[shuffle_order_sequence[:100000]])
 
 """introduce 1-bit error"""
-for item in shuffle_order_sequence[:283900]:
+for item in shuffle_order_sequence[:1500]:
     pre_shuffle_array[item] = err_sequence_1(pre_shuffle_array[item])
 
 """introduce 2 or 3-bit error"""
-for item in shuffle_order_sequence[283900:]:
+for item in shuffle_order_sequence[1500:2500]:
     pre_shuffle_array[item] = err_sequence_23(pre_shuffle_array[item])
 compromised_output_list = list(pre_shuffle_array)
 
@@ -59,14 +59,14 @@ with open(compromised_b_file, 'w') as cff_object:
         cff_object.write(dhc_item)
 
 """rectify 1-bit error from 1-bit error introduction"""
-for item in shuffle_order_sequence[:283900]:
+for item in shuffle_order_sequence[:1500]:
     chc_list_item = hc(pre_shuffle_array[item])
     chc_list_item = [str(i) for i in chc_list_item]
     chc_str_item = ''.join(chc_list_item)
     pre_shuffle_array[item] = chc_str_item
 
-"""rectify 2/3-bit error from 2/3-bit error introduction"""
-for item in shuffle_order_sequence[283900:]:
+"""decode the rest from hammming"""
+for item in shuffle_order_sequence[1500:]:
     pre_shuffle_array[item] = hd(pre_shuffle_array[item])
 rectified_output_list = list(pre_shuffle_array)
 
