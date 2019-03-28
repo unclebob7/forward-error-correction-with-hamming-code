@@ -6,7 +6,7 @@ def noOfParityBits(noOfBits):
 		i+=1
 	return i
 
-#function to genrate no of parity bits while length of entire code is clarfified,
+#function to genrate no of parity bits while length of entire code is clarified,
 def noOfParityBitsInCode(noOfBits):
 	i=0
 	while 2.**i <= noOfBits:
